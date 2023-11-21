@@ -9,6 +9,7 @@ def main():
     bg_img = pg.image.load("ex01/fig/pg_bg.jpg") #練習1：背景画像Surfaceの生成
     kk_img = pg.image.load("ex01/fig/3.png") #練習2:こうかとん画像Surfaceの生成
     kk_img = pg.transform.flip(kk_img, True, False) #練習2:こうかとんを左右反転
+    kk_imgs = [kk_img, pg.transform.rotozoom(kk_img, 10, 1.0)] #練習3:こうかとんSurfaceのリスト
     tmr = 0
     while True:
         for event in pg.event.get():
